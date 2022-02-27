@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Квадратное уравнение</title>
+</head>
+<body>
+    <h3>Решение квадратного уравнения</h3>
+    <span>
+        Решеется квадратное уравнение вида:<br>
+        <b>a∙x<sup>2</sup> + b∙x + c = 0</b><br>
+        <br>
+        Введите коэффициенты уравнения <br>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ equation_form.as_p }}
+            <button type="submit" >
+                Решить уравнение
+            </button>
+        </form>
+    </span>
+</body>
+</html>
